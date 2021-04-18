@@ -1,0 +1,10 @@
+#!/bin/bash
+for oneJavaFile in `ls *.java`
+do
+countOfStrings=0
+while read
+do
+((countOfStrings++))
+done < $oneJavaFile
+echo -e "$oneJavaFile -> $countOfStrings strings"
+done
